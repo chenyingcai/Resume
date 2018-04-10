@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 chown -R nginx:nginx /usr/html
 find /usr/html -type f | xargs chmod 664
 find /usr/html -type d | xargs chmod 775
