@@ -3,6 +3,10 @@ title: Curriculum Vitae | CHEN Yingcai
 name: CHEN Yingcai
 description: "Economie et Ingénierie Financière"
 
+myphoto_url: theme://img/test.jpg
+myphoto_width: 140
+myphoto_height: 190
+
 baseinfo_name: Info de base
 baseinfo:
     - line: Né le: jj mm nnnn
