@@ -11,7 +11,7 @@ if [ "$PASSWORD" != "" ]; then
     unzip /tmp/private.zip -d /tmp
     mv /tmp/grav-plugin-private-master/ /usr/html/user/plugins/private
     mkdir -p /usr/html/user/config/plugins
-    curl -s https://raw.githubusercontent.com/chenyingcai/resume/master/files/private.yaml -o /usr/html/user/config/plugins/private.yaml
+    curl -s https://raw.githubusercontent.com/chenyingcai/Resume/master/files/private.yaml -o /usr/html/user/config/plugins/private.yaml
     sed -i "s/5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8/$PASSWORD/g" /usr/html/user/config/plugins/private.yaml
 fi
 # start php-fpm
