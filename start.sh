@@ -6,8 +6,17 @@ echo "Port: ${RESUME_PORT:="8080"}"
 if [ "$(docker images -q $DOCKER_NAME 2> /dev/null)" == "" ]; then
   echo "没有找到$DOCKER_NAME容器"
   echo "----------------------------------------------"
+  echo "获取相关文档"
+  wget https://github.com/chenyingcai/Resume/archive/master.zip
+  unzip -o master.zip $PWD/
+  mv -f $PWD/Resume-master/* $PWD/
+  rm -rf master start.sh LICENSE README.md
+  echo "----------------------------------------------"
   echo "开始创建c$DOCKER_NAME容器"
   docker build -t $DOCKER_NAME .
+  rm -rf $PWD/*
+  echo "done"
+  echo "----------------------------------------------"
 fi
 mkdir -p $RESUME_PATH
 docker run -d --name resume_tmp $DOCKER_NAME
